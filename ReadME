@@ -1,0 +1,80 @@
+Weather App
+This is a simple weather application built using Flask for the backend, HTML/CSS for the frontend, and the OpenWeatherMap API to fetch real-time weather data. The application allows users to enter a city name and displays the current weather conditions including temperature, weather description, and an icon representing the weather.
+
+Features
+Fetches real-time weather data from the OpenWeatherMap API.
+Displays the city name, current temperature (in Celsius), and a weather description.
+Uses a weather icon fetched from OpenWeatherMap's API.
+A simple, user-friendly interface with a responsive design.
+Handles errors such as invalid city names or API failures gracefully.
+Technologies Used
+Flask: A lightweight Python web framework used to build the backend.
+OpenWeatherMap API: Provides real-time weather data for cities.
+HTML/CSS: For the frontend design and structure.
+Python: For backend programming and API integration.
+Prerequisites
+Before running the project, you need to have the following installed:
+
+Python 3.x: Ensure Python is installed on your system.
+Flask: Flask is used as the web framework to create the backend.
+requests: This library is used to make HTTP requests to the OpenWeatherMap API.
+You can install the necessary Python packages by running:
+pip install Flask requests
+Setup Instructions
+1. Clone the Repository
+First, clone the repository to your local machine:
+git clone https://github.com/yourusername/weather-app.git
+cd weather-app
+2. Get an OpenWeatherMap API Key
+Go to OpenWeatherMap and create an account.
+After logging in, navigate to the API keys page.
+Copy your API key.
+3. Update the API Key in app.py
+In the file app.py, replace 'YOUR_API_KEY' with the API key you just obtained from OpenWeatherMap.
+api_key = '9ed4ed577cc9e07e2194a97d6f890903'  # Replace with your OpenWeatherMap API key
+4. Run the Application
+In the project directory, run the Flask app using the following command:
+python app.py
+This will start the Flask development server, and you can access the weather app by navigating to http://127.0.0.1:5000/ in your web browser.
+
+Usage
+Once the application is running:
+
+Open the application in your browser: Navigate to http://127.0.0.1:5000/.
+Enter a City: In the input field, type the name of a city (e.g., "London", "Paris", "New York").
+Click "Get Weather": The current weather information for that city will be displayed, including:
+The name of the city.
+The current temperature (in Celsius).
+A description of the weather (e.g., sunny, rainy).
+An icon representing the weather.
+If the city is invalid or the API request fails, an error message will be displayed.
+
+File Structure
+weather-app/
+│
+├── app.py                # Backend Python code using Flask to handle the API request
+├── templates/            # HTML templates
+│   └── index.html        # The main HTML file for displaying the weather data
+├── static/               # Folder for static files (e.g., CSS, JavaScript, images)
+│   └── style.css         # CSS file for styling the app
+└── README.md             # Project documentation (this file)
+Troubleshooting
+1. Missing requests Module
+If you encounter an error like ModuleNotFoundError: No module named 'requests', you likely need to install the requests module. You can install it using:
+pip install requests
+2. Invalid API Key
+If the API fails or you see an error related to "Unauthorized" or "401", ensure that your OpenWeatherMap API key is correct and has been properly inserted into the app.py file.
+
+3. City Not Found
+If you enter a city name that doesn't exist or is misspelled, the app will show an error message like "City not found or invalid API response. Please try again." Make sure the city name is correctly entered.
+
+Contributing
+Feel free to fork this repository and submit pull requests if you'd like to contribute to the project. Whether it's bug fixes, new features, or improvements to the code or design, contributions are welcome!
+
+License
+This project is open-source and available under the MIT License.
+
+Acknowledgements
+Flask: A simple and powerful Python web framework.
+OpenWeatherMap API: Provides the weather data used in this project.
+Bootstrap: Used for making the frontend design responsive.
