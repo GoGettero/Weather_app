@@ -1,0 +1,113 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.city-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.city-form input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 70%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.city-form input:focus {
+    border-color: #4CAF50;
+}
+
+.city-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.city-form button:hover {
+    background-color: #45a049;
+}
+
+.weather-info {
+    margin-top: 20px;
+}
+
+.weather-info h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.temperature {
+    font-size: 3rem;
+    color: #333;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #555;
+    text-transform: capitalize;
+}
+
+.weather-icon {
+    margin-top: 20px;
+    width: 100px;
+}
+
+.error-message {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .city-form input {
+        width: 60%;
+    }
+    .city-form button {
+        width: 35%;
+    }
+}
